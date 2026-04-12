@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx --version)",
+      "Bash(mv \"Screenshot 2026-04-07 at 9.31.48 PM.png\" \"dinner2-main.png\")",
+      "Bash(mv \"Sunny garden barbecue with bold characters.png\" \"dinner8-main.png\")",
+      "Bash(mv \"Backyard party grill vibes.png\" \"dinner8-alt.png\")",
+      "Bash(mv \"main picture.png\" \"main-picture.png\")",
+      "Bash(python3 -c ':*)"
+    ]
+  }
+}

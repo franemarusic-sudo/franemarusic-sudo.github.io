@@ -31,9 +31,9 @@ function initStrip() {
 
   function update() {
     const vis = getVisible();
-    const pct = 100 / vis;
-    images.forEach(img => { img.style.flex = `0 0 ${pct}%`; });
-    track.style.transform = `translateX(-${current * pct}%)`;
+    const itemWidth = stripEl.offsetWidth / vis;
+    images.forEach(img => { img.style.flex = `0 0 ${itemWidth}px`; });
+    track.style.transform = `translateX(-${current * itemWidth}px)`;
     prevBtn.disabled = current === 0;
     nextBtn.disabled = current >= images.length - vis;
   }

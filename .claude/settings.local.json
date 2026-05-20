@@ -9,7 +9,10 @@
       "Bash(mv \"main picture.png\" \"main-picture.png\")",
       "Bash(python3 -c ':*)",
       "WebFetch(domain:thesupperclubinc.com)",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(git add *)",
+      "Bash(git rebase *)",
+      "Bash(GIT_EDITOR=true git rebase --continue)"
     ]
   }
 }

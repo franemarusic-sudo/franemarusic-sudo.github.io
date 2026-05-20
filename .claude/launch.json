@@ -4,7 +4,7 @@
     {
       "name": "enoteca",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3456", "/Users/franemarusic/Desktop/claudeapp"],
+      "runtimeArgs": ["serve", "-l", "3456", "/Users/franemarusic/Desktop/YALENOTECA/claudeapp"],
       "port": 3456
     }
   ]

@@ -88,10 +88,30 @@
       <img src="images/host/frane.png" alt="Frane Marusic">
     </div>
     <div class="host__text">
-      <h2 class="host__name">Frane Marusic</h2>
+      <h2 class="host__name">Frane</h2>
       <p>Born in Croatia, Frane learned to cook at a young age alongside his mother. What began in the family kitchen grew into a love of hosting and bringing people together around food.</p>
       <p>He began hosting dinner parties in high school, which led to new friendships, romances, and plenty of stories along the way. More recently, he spent the summer taking cooking classes in Tuscany, Italy, where he earned a certification in pasta making.</p>
       <p>Frane is now based in New Haven, where he is a senior at Yale College and the founder of Yalenoteca, bringing together his love of cooking, hospitality, and meeting new people.</p>
+    </div>
+  </div>
+
+  <div class="strip-wrapper" data-food-strip-wrapper>
+    <div class="strip" data-food-strip>
+      <div class="strip__track">
+        <img src="images/host/food/IMG_7601.jpg" alt="">
+        <img src="images/host/food/IMG_7602.jpg" alt="">
+        <img src="images/host/food/IMG_7603.jpg" alt="">
+        <img src="images/host/food/IMG_7604.jpg" alt="">
+        <img src="images/host/food/IMG_7605.jpg" alt="">
+        <img src="images/host/food/Screenshot-2026-10-06-at-12.40.21-PM.png" alt="">
+        <img src="images/host/food/Screenshot-2026-10-06-at-12.41.34-PM.png" alt="">
+        <img src="images/host/food/Screenshot-2026-10-06-at-12.41.43-PM.png" alt="">
+        <img src="images/host/food/Screenshot-2026-10-06-at-12.43.04-PM.png" alt="">
+        <img src="images/host/food/Screenshot-2026-10-06-at-12.45.10-PM.png" alt="">
+        <img src="images/host/food/Screenshot-2026-10-06-at-12.51.40-PM.png" alt="">
+      </div>
+      <button class="strip__btn strip__btn--prev" aria-label="Previous">&#8592;</button>
+      <button class="strip__btn strip__btn--next" aria-label="Next">&#8594;</button>
     </div>
   </div>
 
@@ -99,5 +119,49 @@
     <p>Yalenoteca &nbsp;·&nbsp; A Yale College Club.</p>
   </footer>
 
+  <script>
+    (function() {
+      const stripEl = document.querySelector('[data-food-strip]');
+      if (!stripEl) return;
+      const track = stripEl.querySelector('.strip__track');
+      const images = Array.from(track.querySelectorAll('img'));
+      const prevBtn = stripEl.querySelector('.strip__btn--prev');
+      const nextBtn = stripEl.querySelector('.strip__btn--next');
+      let current = 0;
+
+      function getVisible() {
+        if (window.innerWidth < 640) return 1;
+        if (window.innerWidth < 1024) return 2;
+        return 3;
+      }
+
+      function update() {
+        const vis = getVisible();
+        const itemWidth = stripEl.offsetWidth / vis;
+        images.forEach(img => { img.style.flex = '0 0 ' + itemWidth + 'px'; });
+        track.style.transform = 'translateX(-' + (current * itemWidth) + 'px)';
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current >= images.length - vis;
+      }
+
+      prevBtn.addEventListener('click', () => { if (current > 0) { current--; update(); } });
+      nextBtn.addEventListener('click', () => { if (current < images.length - getVisible()) { current++; update(); } });
+
+      let startX = 0;
+      track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (diff > 50 && current < images.length - getVisible()) { current++; update(); }
+        if (diff < -50 && current > 0) { current--; update(); }
+      });
+
+      window.addEventListener('resize', () => {
+        current = Math.min(current, Math.max(0, images.length - getVisible()));
+        update();
+      });
+
+      update();
+    })();
+  </script>
 </body>
 </html>

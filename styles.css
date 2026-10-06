@@ -168,7 +168,8 @@ ul { list-style: none; }
   flex-direction: column;
   justify-content: center;
   gap: 1.4rem;
-  border-left: 1px solid var(--line);
+  background: var(--ink);
+  border-left: none;
   overflow-y: auto;
 }
 
@@ -177,13 +178,14 @@ ul { list-style: none; }
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.85;
-  color: var(--ink);
+  color: rgba(255, 255, 255, 0.88);
 }
 
 .about__text em {
   font-style: italic;
   font-family: var(--serif);
   font-size: 1.2em;
+  color: #fff;
 }
 
 

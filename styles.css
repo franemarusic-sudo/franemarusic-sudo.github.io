@@ -344,7 +344,7 @@ ul { list-style: none; }
 }
 
 .events__logos img {
-  width: 120px;
+  width: clamp(120px, 12vw, 220px);
   height: auto;
   object-fit: contain;
   opacity: 0.85;

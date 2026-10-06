@@ -132,7 +132,7 @@ ul { list-style: none; }
 
 .kitchen-label p {
   font-family: var(--serif);
-  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
   font-weight: 300;
   font-style: italic;
   color: var(--ink);

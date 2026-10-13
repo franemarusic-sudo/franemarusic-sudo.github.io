@@ -3,14 +3,9 @@
 // ── Splash (shows on every page load) ─────────────────────────
 const splash = document.getElementById('splash');
 
-function showSplash() {
-  splash.classList.add('splash--active');
-  setTimeout(() => {
-    splash.classList.remove('splash--active');
-  }, 3500);
-}
-
-showSplash();
+setTimeout(() => {
+  splash.classList.add('splash--hidden');
+}, 2000);
 
 // ── Photo strip ────────────────────────────────────────────────
 function initStrip() {

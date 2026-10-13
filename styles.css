@@ -41,20 +41,14 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 1.2s ease;
+}
+
+.splash--hidden {
   opacity: 0;
   pointer-events: none;
-}
-
-.splash--active {
-  pointer-events: all;
-  animation: splashAnim 3.5s ease forwards;
-}
-
-@keyframes splashAnim {
-  0%   { opacity: 0; }
-  22%  { opacity: 1; }
-  78%  { opacity: 1; }
-  100% { opacity: 0; }
 }
 
 .splash__image {

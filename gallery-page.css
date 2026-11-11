@@ -115,11 +115,11 @@ ul { list-style: none; }
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.4s ease;
+  transition: transform 0.6s ease;
 }
 
 .gallery-item img:hover {
-  transform: scale(1.03);
+  transform: scale(1.08);
 }
 
 /* Kitchen label */

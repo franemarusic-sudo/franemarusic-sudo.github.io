@@ -104,12 +104,10 @@ ul { list-style: none; }
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 4rem 2.5rem;
-  gap: 2rem;
+  padding: 2.5rem 2.5rem 1.5rem;
 }
 
-.hero__text { padding-bottom: 2rem; }
+.hero__text { padding-bottom: 0; }
 
 .hero__text h1 {
   font-family: var(--serif);

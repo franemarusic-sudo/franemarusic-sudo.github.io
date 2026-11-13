@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partners — Yalenoteca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery-page.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NR1KRSPYT8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NR1KRSPYT8');
+  </script>
+  <style>
+    :root {
+      --cardo: 'Cardo', Georgia, serif;
+    }
+
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--line);
+      max-width: 1000px;
+      margin: 0 auto 6rem;
+    }
+
+    .partner-card {
+      padding: 4rem 3rem;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+
+    .partner-card:nth-child(odd) {
+      border-right: 1px solid var(--line);
+    }
+
+    .partner-card__logo {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      opacity: 0.75;
+      transition: opacity 0.3s;
+    }
+
+    .partner-card:hover .partner-card__logo {
+      opacity: 1;
+    }
+
+    .partner-card__name {
+      font-family: var(--cardo);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey);
+    }
+
+    @media (max-width: 600px) {
+      .partners-grid {
+        grid-template-columns: 1fr;
+      }
+      .partner-card:nth-child(odd) {
+        border-right: none;
+      }
+      .partner-card {
+        padding: 3rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">Yalenoteca</a>
+    <ul class="nav__links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="host.html">The Host</a></li>
+      <li><a href="partners.html" class="nav__active">Partners</a></li>
+    </ul>
+  </nav>
+
+  <header class="gallery-header">
+    <h1>Partners</h1>
+  </header>
+
+  <div class="partners-grid">
+    <a class="partner-card" href="https://www.carbonefinefood.com/" target="_blank" rel="noopener">
+      <img class="partner-card__logo" src="images/partners/carbone.avif" alt="Carbone">
+      <span class="partner-card__name">Carbone</span>
+    </a>
+    <a class="partner-card" href="https://www.mygabrielglas.com/" target="_blank" rel="noopener">
+      <img class="partner-card__logo" src="images/partners/gabriel-glas.png" alt="Gabriel Glas">
+      <span class="partner-card__name">Gabriel Glas</span>
+    </a>
+  </div>
+
+  <footer class="gallery-footer">
+    <p>Yalenoteca &nbsp;·&nbsp; A Yale College Club.</p>
+  </footer>
+
+</body>
+</html>

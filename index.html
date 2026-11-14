@@ -14,7 +14,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -79,10 +79,11 @@
     }
 
     .nav__links a {
-      font-family: var(--lora);
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      text-transform: none;
       color: var(--ink);
       opacity: 0.6;
       transition: opacity 0.2s;
@@ -107,10 +108,11 @@
     }
 
     .hero p {
-      font-family: var(--lora);
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      text-transform: none;
       color: var(--grey);
     }
 
@@ -182,8 +184,9 @@
     }
 
     .about__text p {
-      font-family: var(--lora);
+      font-family: 'DM Sans', sans-serif;
       font-size: 1rem;
+      font-weight: 300;
       line-height: 1.9;
       color: rgba(255,255,255,0.85);
     }
@@ -197,19 +200,25 @@
 
     /* ── Quote ── */
     .quote {
-      padding: 6rem 3rem;
+      padding: 6rem 2rem;
       text-align: center;
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
 
     .quote p {
       font-family: var(--cardo);
-      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-size: clamp(1.4rem, 2.8vw, 2.6rem);
       font-weight: 400;
       font-style: italic;
       color: var(--ink);
-      line-height: 1.35;
+      line-height: 1.4;
+      max-width: min(800px, 90vw);
+      width: 100%;
     }
 
     /* ── Strip ── */
@@ -266,8 +275,9 @@
     }
 
     .events__text {
-      font-family: var(--lora);
+      font-family: 'DM Sans', sans-serif;
       font-size: 0.95rem;
+      font-weight: 300;
       line-height: 1.85;
       color: var(--ink);
       max-width: 560px;
@@ -304,7 +314,9 @@
     }
 
     .join__sub {
-      font-size: 0.9rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
       color: var(--grey);
       margin-bottom: 2.5rem;
     }
@@ -317,7 +329,8 @@
       width: 100%; background: transparent;
       border: none; border-bottom: 1px solid var(--line);
       padding: 0.65rem 0;
-      font-family: var(--lora); font-size: 0.88rem;
+      font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+      font-weight: 300;
       color: var(--ink); outline: none;
       transition: border-color 0.2s; resize: none;
     }
@@ -331,8 +344,8 @@
       align-self: center; margin-top: 0.5rem;
       padding: 0.75rem 3rem;
       background: var(--ink); color: var(--bg);
-      font-family: var(--lora); font-size: 0.7rem;
-      font-weight: 400; letter-spacing: 0.16em;
+      font-family: 'DM Sans', sans-serif; font-size: 0.72rem;
+      font-weight: 300; letter-spacing: 0.14em;
       text-transform: uppercase;
       border: none; cursor: pointer; transition: opacity 0.2s;
     }
@@ -343,7 +356,10 @@
       padding: 2.5rem 3rem;
       border-top: 1px solid var(--line);
       display: flex; flex-direction: column; gap: 1rem;
-      font-size: 0.82rem; color: var(--grey);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--grey);
     }
     .footer__top { display: flex; justify-content: space-between; align-items: center; }
     .footer__disclaimer { font-size: 0.78rem; line-height: 1.6; }
@@ -384,7 +400,7 @@
 
   <!-- Hero -->
   <header class="hero">
-    <h1>Yal<span style="color:#6B7280;">e</span>noteca</h1>
+    <h1>Yal<span style="color:#8a9aaa;">e</span>noteca</h1>
     <p>A supper club &nbsp;·&nbsp; Est. 2025</p>
   </header>
 

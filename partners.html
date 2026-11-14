@@ -6,7 +6,7 @@
   <title>Partners — Yalenoteca</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="gallery-page.css">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NR1KRSPYT8"></script>
@@ -23,7 +23,7 @@
 
     .partners-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       border-top: 1px solid var(--line);
       max-width: 1000px;
       margin: 0 auto 6rem;
@@ -41,12 +41,49 @@
     }
 
     .partner-card:nth-child(odd) {
-      border-right: 1px solid var(--line);
+      border-right: none;
+    }
+
+    /* Partners header */
+    .partners-header {
+      padding: 5rem 3rem 4rem;
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .partners-header__label {
+      font-family: var(--font);
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: 1.5rem;
+    }
+
+    .partners-header__title {
+      font-family: var(--cardo);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1;
+      letter-spacing: 0.01em;
+      margin-bottom: 0;
+    }
+
+    .partners-header__sub {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--ink);
+      max-width: 560px;
+      margin: 1.75rem auto 0;
     }
 
     .partner-card__logo {
-      height: 52px;
+      height: 64px;
       width: auto;
+      max-width: 140px;
       object-fit: contain;
       mix-blend-mode: multiply;
       opacity: 0.75;
@@ -58,22 +95,26 @@
     }
 
     .partner-card__name {
-      font-family: var(--cardo);
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      text-transform: none;
       color: var(--grey);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       .partners-grid {
         grid-template-columns: 1fr;
-      }
-      .partner-card:nth-child(odd) {
-        border-right: none;
+        border-top: none;
       }
       .partner-card {
-        padding: 3rem 2rem;
+        padding: 2.5rem 2rem;
+        border-bottom: none;
+      }
+      .partner-card__logo {
+        height: 48px;
+        max-width: 120px;
       }
     }
   </style>
@@ -90,8 +131,9 @@
     </ul>
   </nav>
 
-  <header class="gallery-header">
-    <h1>Partners</h1>
+  <header class="partners-header">
+    <h1 class="partners-header__title">Partners</h1>
+    <p class="partners-header__sub">We're grateful to the brands who share our appreciation for food, hospitality, and bringing people together. Thank you for being part of the Yalenoteca table.</p>
   </header>
 
   <div class="partners-grid">
@@ -102,6 +144,10 @@
     <a class="partner-card" href="https://www.mygabrielglas.com/" target="_blank" rel="noopener">
       <img class="partner-card__logo" src="images/partners/gabriel-glas.png" alt="Gabriel Glas">
       <span class="partner-card__name">Gabriel Glas</span>
+    </a>
+    <a class="partner-card" href="https://vitalfarms.com/" target="_blank" rel="noopener">
+      <img class="partner-card__logo" src="images/partners/vital-farms.png" alt="Vital Farms">
+      <span class="partner-card__name">Vital Farms</span>
     </a>
   </div>
 
